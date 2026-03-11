@@ -64,6 +64,82 @@
             gap: 20px 40px;
             margin-bottom: 20px;
         }
+        .campo-grupo2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px 40px;
+            margin-bottom: 20px;
+        }
+        .campo-grupo3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px 40px;
+            margin-bottom: 20px;
+        }
+        input[readonly]{
+            background-color: #f0f4f8;
+            color:#555;
+            cursor: not-allowed;
+        }
+        #bloco-segunda-lingua{
+            display: grid;
+            margin-top: 20px;
+            padding:20px 25px;
+            background-color: #f0f6ff;
+            border: 2px dashed #1a2f45;
+            border-radius: 8px;
+            animation: fadeIn 0.3s ease;
+        }
+        #bloco-segunda-lingua p{
+            font-size: 14px;
+            font-weight: blod;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color:#1a2f45;
+            margin-bottom: 14px;
+        }
+        .opcao-lingua{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+        .opcao-lingua input[type="radio"]{
+            accent-color: #1a2f45;
+            width:16px;
+            height: 16px;
+            margin-right: 0;
+            cursor: pointer;
+        }
+        .opcao-lingua label{
+            text-transform: none;
+            letter-spacing: 0;
+            font-weight: normal;
+            font-size: 15px;
+            color: #333;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        #bloco-telefone-tarde{
+            display: grid;
+            margin-top: 16px;
+            padding: 16px 20px;
+            background-color: #fff8f0;
+            border: 2px dashed #e67e22;
+            border-radius: 8px;
+            animation: fadeIn 0.3s ease;
+        }
+        #bloco-telefone-tarde p{
+            font-size:13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
         .campo{
             display: flex;
             flex-direction: column;
@@ -252,8 +328,53 @@
             <input type="text" id="telefone" name="telefone" maxlength="15" placeholder="(61) 9 9999-9999">
           </div>
         </div>
-  
+       <div class="campo-grupo">
+          <div class="campo">
+            <label for="CPF">CPF</label>
+            <input type="text" id="CPF" name="CPF" maxlength="15" placeholder="000.000.000-00">
+          </div>
+          <div class="campo">
+            <label for="CEP">CEP</label>
+            <input type="text" id="CPF" name="CPF" maxlength="15" placeholder="00000-000">
+          </div>
+        </div> 
       </fieldset>
+      <fieldset>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="Logradouro">Logradouro</label>
+            <input type="text" id="Logradouro" name="Logradouro" maxlength="15">
+          </div>
+          <div class="campo">
+            <label for="Numero">Numero</label>
+            <input type="text" id="Numero" name="Numero" maxlength="15" placeholder="Ex: 123">
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="Complemento">Complemento</label>
+            <input type="text" id="Complemento" name="Complemento" maxlength="15" placeholder="Apto bloco">
+          </div>
+          <div class="campo">
+            <label for="Bairro">Bairro</label>
+            <input type="text" id="Bairro" name="Bairro" maxlength="15">
+          </div>
+        </div>
+         <div class="campo-grupo2">
+          <div class="campo">
+            <label for="Cidade">Cidade</label>
+            <input type="text" id="Complemento" name="Complemento" maxlength="15" placeholder="Apto bloco">
+          </div>
+          <div class="campo">
+            <label for="Estado">Estado</label>
+            <input type="text" id="Estado" name="Estado" maxlength="15">
+          </div>
+           <div class="campo">
+            <label for="Codigo Ibge">CóDIGO IBGE</label>
+            <input type="text" id="Codigo ibge" name="Codigo ibge" maxlength="15">
+          </div>
+        </div>
+      </fieldset> 
   
       <fieldset>
         <legend><strong>Informações de Matrícula</strong></legend>
@@ -270,8 +391,20 @@
                 <option value="4ano">4º ano</option>
                 <option value="5ano">5º ano</option>
               </select>
+            <div id="bloco-segunda-lingua">
+             <p>SEGUNDA LINGUA</p>
+             <div class=""opcao-lingua">
+                <input type="radio" id="lingua_inglesa" name="segunda_lingua" value="ingles">
+                <span class="flag">US</span>
+                <label for="lingua_ingles">Inglês</label>
+             </div>   
+             <div class=""opcao-lingua">
+                <input type="radio" id="lingua_espanhol" name="segunda_lingua" value="espanhol">
+                <span class="flag">ES</span>
+                <label for="lingua_espanhol">Espanhol</label>
+             </div>
+            </div>
             </td>
-  
             <td>
               <strong>Turno</strong>
               <input type="radio" name="turno" id="manha" value="manha">
